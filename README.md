@@ -37,11 +37,11 @@ Use virtual types to log debug messages into a custom log file
 
 3. In the di.xml file of your module, define a custom log file as a virtual type:
 
- ```<virtualType name="Magento\LogModule\Model\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
-        <arguments>
-            <argument name="fileName" xsi:type="string">/var/log/track_log_file.log</argument>
-        </arguments>
-    </virtualType>```
+    ```<virtualType name="Magento\LogModule\Model\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
+            <arguments>
+                <argument name="fileName" xsi:type="string">/var/log/track_log_file.log</argument>
+            </arguments>
+        </virtualType>```
 
 
 --------------
