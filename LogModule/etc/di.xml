@@ -9,7 +9,7 @@
         <arguments>
             <argument name="name" xsi:type="string">logModule</argument>
             <argument name="handlers" xsi:type="array">
-                <item name="system" xsi:type="object">Magento\LogModule\Model\MyCustomDebug</item>
+                <item name="debug" xsi:type="object">Magento\LogModule\Model\MyCustomDebug</item>
             </argument>
         </arguments>
     </virtualType>
