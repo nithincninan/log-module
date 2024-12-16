@@ -11,7 +11,8 @@
  - Track the O/P: var/log/track_log_file.log
 
  
- Use virtual types to log debug messages into a custom log file
+
+Use virtual types to log debug messages into a custom log file
 
 1. Inject the MyCustomLogger virtual type in the Magento\LogModule\Controller\Index\Index object:
    
@@ -41,7 +42,8 @@
  </virtualType>
 
 
-  File: Magento\LogModule\Controller\Index\Index
+
+File: Magento\LogModule\Controller\Index\Index
 
   // Log a string
  
