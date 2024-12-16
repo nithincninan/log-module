@@ -51,18 +51,18 @@ File: Magento\LogModule\Controller\Index\Index
 
   // Log a string
  
-  $this->logger->info('This is a custom log message.’);
+   $this->logger->info('This is a custom log message.’);
 
-  Output: [2024-12-16T03:35:52.833821+00:00] logModule.INFO: This is a custom log message. [] []
+   Output: [2024-12-16T03:35:52.833821+00:00] logModule.INFO: This is a custom log message. [] []
 
 
   // Log an array
  
-  $data = ['key1' => 'value1', 'key2' => 'value2'];
+   $data = ['key1' => 'value1', 'key2' => 'value2'];
 
-  $serializedData = $this->serializer->serialize($data); // Serialize the Data
-  
-  $this->logger->info('Serialized Data: ' . $serializedData); // Log the Serialized Data
+   $serializedData = $this->serializer->serialize($data); // Serialize the Data
+   
+   $this->logger->info('Serialized Data: ' . $serializedData); // Log the Serialized Data
 
 
-  Output: [2024-12-16T03:35:52.835063+00:00] logModule.INFO: Serialized Data: {"key1":"value1","key2":"value2"} [] []
+   Output: [2024-12-16T03:35:52.835063+00:00] logModule.INFO: Serialized Data: {"key1":"value1","key2":"value2"} [] []
