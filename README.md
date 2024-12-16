@@ -59,7 +59,9 @@ File: Magento\LogModule\Controller\Index\Index
   // Log an array
  
   $data = ['key1' => 'value1', 'key2' => 'value2'];
+
   $serializedData = $this->serializer->serialize($data); // Serialize the Data
+  
   $this->logger->info('Serialized Data: ' . $serializedData); // Log the Serialized Data
 
 
