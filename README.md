@@ -12,38 +12,38 @@
 
  
 
-Use virtual types to log debug messages into a custom log file
+ Use virtual types to log debug messages into a custom log file
 
 1. Inject the MyCustomLogger virtual type in the Magento\LogModule\Controller\Index\Index object:
    
-   <type name="Magento\LogModule\Controller\Index\Index">
+   ```<type name="Magento\LogModule\Controller\Index\Index">
      <arguments>
           <argument name="logger" xsi:type="object">MyCustomLogger</argument>
       </arguments>
-    </type>
+    </type>```
  
 2. Define the handler (Magento\LogModule\Model\MyCustomDebug) in a virtual type with a unique name:
 
-    <virtualType name="MyCustomLogger" type="Magento\Framework\Logger\Monolog">
+    ```<virtualType name="MyCustomLogger" type="Magento\Framework\Logger\Monolog">
         <arguments>
             <argument name="name" xsi:type="string">logModule</argument>
             <argument name="handlers" xsi:type="array">
                 <item name="system" xsi:type="object">Magento\LogModule\Model\MyCustomDebug</item>
             </argument>
         </arguments>
-    </virtualType>
+    </virtualType>```
 
 3. In the di.xml file of your module, define a custom log file as a virtual type:
 
- <virtualType name="Magento\LogModule\Model\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
+ ```<virtualType name="Magento\LogModule\Model\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
     <arguments>
         <argument name="fileName" xsi:type="string">/var/log/track_log_file.log</argument>
      </arguments>
- </virtualType>
+ </virtualType>```
 
 
 
-File: Magento\LogModule\Controller\Index\Index
+ File: Magento\LogModule\Controller\Index\Index
 
   // Log a string
  
